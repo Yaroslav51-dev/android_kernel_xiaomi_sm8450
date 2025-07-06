@@ -13,7 +13,7 @@ BRANCH="$(git branch --show-current)"
 DO_CLEAN=false
 NO_LTO=false
 ONLY_CONFIG=false
-TARGET=
+TARGET=marble
 DTB_WILDCARD="*"
 DTBO_WILDCARD="*"
 
