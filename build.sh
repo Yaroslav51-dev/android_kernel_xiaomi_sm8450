@@ -40,12 +40,7 @@ if [ -z "$TARGET" ]; then
     exit 1
 fi
 
-if ! source .build.rc || [ -z "$SRC_ROOT" ]; then
-    echo -e "Create a .build.rc file here and define\nSRC_ROOT=<path/to/aospa/source>"
-    exit 1
-fi
-
-KERNEL_DIR="$SRC_ROOT/device/xiaomi/$TARGET-kernel"
+KERNEL_DIR="kernel_platform/xiaomi/sm8450/out"
 
 if [ ! -d "$KERNEL_DIR" ]; then
     echo "$KERNEL_DIR does not exist!"
