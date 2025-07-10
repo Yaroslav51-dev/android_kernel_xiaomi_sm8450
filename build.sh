@@ -131,7 +131,7 @@ rm -rf out/modules out/*.ko
 m INSTALL_MOD_PATH=modules INSTALL_MOD_STRIP=1 modules_install
 
 echo -e "\nCopying KSU LKM..."
-ksu_path="$(find $modules_out -name 'kernelsu.ko' -print -quit)"
+ksu_path="$(find "$modules_out" -name 'kernelsu.ko' -print -quit)"
 if [ -n "$ksu_path" ]; then
     mv "$ksu_path" out
     echo "Copied to out/kernelsu.ko"
@@ -191,7 +191,7 @@ echo "Generated dtbo.img to $DTBO_COPY_TO".
 first_stage_modules="$(cat modules.list.msm.waipio)"
 second_stage_modules="$(cat modules.list.second_stage modules.list.second_stage.$TARGET)"
 vendor_dlkm_modules="$(cat modules.list.vendor_dlkm modules.list.vendor_dlkm.$TARGET)"
-modules_out="out/modules/lib/modules/$(ls -t out/modules/lib/modules/ | head -n1)"
+modules_out="$MODULES_DIR/$KERNEL_VER_DIR"
 
 rm -rf $VBOOT_DIR && mkdir -p $VBOOT_DIR
 rm -rf $VDLKM_DIR && mkdir -p $VDLKM_DIR
