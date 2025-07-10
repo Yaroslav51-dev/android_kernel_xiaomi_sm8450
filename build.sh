@@ -4,9 +4,9 @@
 # Copyright (C) 2024 Adithya R.
 
 SECONDS=0 # start builtin bash timer
-KP_ROOT="$(realpath ../..)"
-SRC_ROOT="$HOME/pa"
-TC_DIR="$KP_ROOT/prebuilts-master/clang/host/linux-x86/clang-r510928"
+KP_ROOT="$HOME"
+SRC_ROOT="$HOME/kernel"
+TC_DIR="$KP_ROOT/prebuilts-master/clang/host/linux-x86/clang-r416183b"
 PREBUILTS_DIR="$KP_ROOT/prebuilts/kernel-build-tools/linux-x86"
 BRANCH="$(git branch --show-current)"
 
